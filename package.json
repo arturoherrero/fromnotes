@@ -1,0 +1,24 @@
+{
+  "name": "fromnotes",
+  "version": "0.1.0",
+  "description": "FromNotes: Simple note-taking app",
+  "main": "app/main.js",
+  "scripts": {
+    "eslint": "eslint app",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/arturoherrero/fromnotes"
+  },
+  "author": "Arturo Herrero",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^11.3.0"
+  },
+  "devDependencies": {
+    "electron-reloader": "^1.2.0",
+    "eslint": "^7.21.0"
+  }
+}
