@@ -1,3 +1,3 @@
 # FromNotes
 
-FromNotes: Simple note-taking app.
+FromNotes: Simple autosaving note-taking app.

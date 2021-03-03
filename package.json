@@ -1,7 +1,7 @@
 {
   "name": "fromnotes",
   "version": "0.1.0",
-  "description": "FromNotes: Simple note-taking app",
+  "description": "FromNotes: Simple autosaving note-taking app",
   "main": "app/main.js",
   "scripts": {
     "eslint": "eslint app --fix",
