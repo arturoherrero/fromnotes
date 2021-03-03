@@ -4,7 +4,7 @@
   "description": "FromNotes: Simple note-taking app",
   "main": "app/main.js",
   "scripts": {
-    "eslint": "eslint app",
+    "eslint": "eslint app --fix",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
