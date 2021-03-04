@@ -10,8 +10,6 @@ function createWindow() {
     height: 610,
     titleBarStyle: "hidden",
     webPreferences: {
-      contextIsolation: true,
-      nodeIntegration: false,
       preload: `${__dirname}/preload.js`
     }
   })
