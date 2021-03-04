@@ -1,9 +1,8 @@
-const { readFile, writeFile } = require("./filesystem")
+/* eslint-disable no-undef */
+const textarea = document.querySelector("textarea")
 
-const textarea = document.querySelector("textarea") // eslint-disable-line no-undef
-
-textarea.value = readFile()
+textarea.value = window.fileSystem.readFile()
 
 textarea.addEventListener("keyup", (event) => {
-  writeFile(event.target.value)
+  window.fileSystem.writeFile(event.target.value)
 })
