@@ -10,6 +10,7 @@ function createWindow() {
     height: 610,
     titleBarStyle: "hidden",
     webPreferences: {
+      contextIsolation: false,
       nodeIntegration: true
     }
   })
