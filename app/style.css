@@ -26,3 +26,8 @@ https://www.electronjs.org/docs/api/frameless-window
   font-size: 19px;
   overflow: scroll;
 }
+
+.tab {
+  white-space: pre;
+  tab-size: 2;
+}

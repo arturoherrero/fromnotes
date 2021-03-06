@@ -5,7 +5,9 @@ textarea.innerHTML = window.fileSystem.readFile()
 
 const insertTab = () => {
   const range = document.getSelection().getRangeAt(0)
-  const tabNode = document.createTextNode("\u00A0\u00A0")
+  const tabNode = document.createElement("span")
+  tabNode.appendChild(document.createTextNode("\t"))
+  tabNode.className = "tab"
 
   range.insertNode(tabNode)
   range.setStartAfter(tabNode)
