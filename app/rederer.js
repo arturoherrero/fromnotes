@@ -1,17 +1,14 @@
 /* eslint-disable no-undef */
 const textarea = document.querySelector("#textarea")
 
-textarea.innerHTML = window.fileSystem.readFile()
+textarea.value = window.fileSystem.readFile()
 
 const insertTab = () => {
-  const range = document.getSelection().getRangeAt(0)
-  const tabNode = document.createElement("span")
-  tabNode.appendChild(document.createTextNode("\t"))
-  tabNode.className = "tab"
+  const start = textarea.selectionStart
+  const end = textarea.selectionEnd
 
-  range.insertNode(tabNode)
-  range.setStartAfter(tabNode)
-  range.setEndAfter(tabNode)
+  textarea.value = `${textarea.value.substring(0, start)}\t${textarea.value.substring(end)}`
+  textarea.selectionStart = textarea.selectionEnd = start + 1
 }
 
 textarea.addEventListener("keydown", (event) => {
@@ -21,5 +18,5 @@ textarea.addEventListener("keydown", (event) => {
 })
 
 textarea.addEventListener("keyup", (event) => {
-  window.fileSystem.writeFile(event.target.innerHTML)
+  window.fileSystem.writeFile(event.target.value)
 })
