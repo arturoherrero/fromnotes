@@ -2,6 +2,7 @@
 const textarea = document.querySelector("#textarea")
 
 textarea.value = window.fileSystem.readFile()
+textarea.setSelectionRange(0, 0)
 
 const tabAction = () => {
   document.execCommand("insertText", false, "\t")
