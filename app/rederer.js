@@ -12,12 +12,12 @@ const enterAction = () => {
   const indentation_for = (line) => {
     if (line.length === 0) return ""
 
-    const matchBulletOrTab = line.match(/^(\t*-\s|\t+).*/)
+    const matchTab = line.match(/^(\t+).*/)
 
-    if (matchBulletOrTab === null || matchBulletOrTab[0] === matchBulletOrTab[1]) {
+    if (matchTab === null || matchTab[0] === matchTab[1]) {
       return ""
     } else {
-      return matchBulletOrTab[1]
+      return matchTab[1]
     }
   }
 
