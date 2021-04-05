@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron")
+const { app, BrowserWindow, Menu } = require("electron")
 
 try {
   require("electron-reloader")(module)
@@ -17,4 +17,13 @@ const createWindow = () => {
   mainWindow.loadFile(`${__dirname}/index.html`)
 }
 
-app.whenReady().then(createWindow)
+const setMenu = () => {
+  const menu = Menu.getApplicationMenu()
+  menu.items.find(item => item.role === "filemenu").visible = false
+  menu.items.find(item => item.role === "help").visible = false
+  Menu.setApplicationMenu(menu)
+}
+
+app.whenReady()
+  .then(createWindow)
+  .then(setMenu)
