@@ -24,6 +24,7 @@ const setMenu = () => {
   Menu.setApplicationMenu(menu)
 }
 
+app.setName("FromNotes")
 app.whenReady()
   .then(createWindow)
   .then(setMenu)

@@ -4,9 +4,9 @@
   "description": "FromNotes: Simple autosaving note-taking app",
   "main": "app/main.js",
   "scripts": {
+    "build": "electron-builder --mac",
     "eslint": "eslint app --fix",
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -14,11 +14,18 @@
   },
   "author": "Arturo Herrero",
   "license": "MIT",
-  "dependencies": {
-    "electron": "^12.0.0"
-  },
   "devDependencies": {
+    "electron": "^12.0.0",
+    "electron-builder": "^22.10.5",
     "electron-reloader": "^1.2.0",
     "eslint": "^7.21.0"
+  },
+  "build": {
+    "productName": "FromNotes",
+    "mac": {
+      "target": [
+        "dir"
+      ]
+    }
   }
 }
