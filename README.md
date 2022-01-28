@@ -24,16 +24,29 @@ Install npm packages:
 npm install
 ```
 
+Create the text file:
+```sh
+touch `$HOME/.fromnotes`
+```
+
 Start the application:
 
 ```sh
 npm run start
 ```
 
+## Package & Distribute
+
 Package and build a ready for distribution application for macOS:
 
 ```sh
 npm run build
+```
+
+Move the application to the Applications directory:
+
+```sh
+mv dist/mac/FromNotes.app/ /Applications/
 ```
 
 
